@@ -30,8 +30,8 @@ def create_domain_one_passenger():
                 ('position', 'by'),
             ),
             preconditions=(
-                ('at', 't', 'px', 'py'),
                 ('inc', 'py', 'by'),
+                ('at', 't', 'px', 'py'),
             ),
             effects=(
                 neg(('at', 't', 'px', 'py')),
@@ -47,12 +47,12 @@ def create_domain_one_passenger():
                 ('position', 'bx'),
             ),
             preconditions=(
-
-
+                ('inc', 'px', 'bx'),
+                ('at', 't', 'px', 'py'),
             ),
             effects=(
-
-
+                neg(('at', 't', 'px', 'py')),
+                ('at', 't', 'bx', 'py'),
             ),
         ),
         Action(
