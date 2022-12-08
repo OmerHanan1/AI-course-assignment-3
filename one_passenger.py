@@ -47,7 +47,7 @@ def create_domain_one_passenger():
                 ('position', 'bx'),
             ),
             preconditions=(
-                ('inc', 'px', 'bx'),
+                ('dec', 'px', 'bx'),
                 ('at', 't', 'px', 'py'),
             ),
             effects=(
@@ -64,12 +64,12 @@ def create_domain_one_passenger():
                 ('position', 'bx'),
             ),
             preconditions=(
-
-
+                ('inc', 'px', 'bx'),
+                ('at', 't', 'px', 'py'),
             ),
             effects=(
-
-
+                neg(('at', 't', 'px', 'py')),
+                ('at', 't', 'bx', 'py'),
             ),
         ),
         Action(
